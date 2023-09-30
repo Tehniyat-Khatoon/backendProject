@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const userSchema=new mongoose.Schema({
     Fname:{type:String,min:100,max:900,require:true},
     lname:{type:String,min:100,max:900,require:true},
-    mobile:{type:Number,min:100,max:900,require:true},
+    mobile:{type:mongoose.Decimal128,min:100,max:900,require:true},
     emailId:{type:String,min:100,max:900,require:true}
     
 
