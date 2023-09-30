@@ -4,8 +4,8 @@ import mongoose from 'mongoose'
 
 const studentSchema = new mongoose.Schema({
     name: {type:String,required:true,trim:true},
-    email:{type:String,min:100,max:900,require:true},
-    message:{type:String,min:1000,max:9000,require:true}
+    email:{type:String,require:true},
+    message:{type:String,min:10,max:900,require:true}
    
 })
 
