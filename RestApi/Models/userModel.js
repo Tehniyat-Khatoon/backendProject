@@ -3,10 +3,11 @@ import mongoose from "mongoose";
 // const saltRounds = 10;
 
 const userSchema=new mongoose.Schema({
-    name:String,
-    mobile:Number,
-    emailId:String,  //{type:string,min:1000,max:9000,require:true}
-    password:String  
+    Fname:{type:String,min:100,max:900,require:true},
+    lname:{type:String,min:100,max:900,require:true},
+    mobile:{type:Number,min:100,max:900,require:true},
+    emailId:{type:String,min:100,max:900,require:true}
+    
 
 });
 
