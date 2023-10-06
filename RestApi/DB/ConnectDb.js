@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 // connectDB.js
 // const mongoose = require('mongoose');
 
-const mongoURI ="mongodb+srv://khantehniyat83464928:TTtt1727@studentapisdata.hbyaf3g.mongodb.net/"
+const mongoURI ="mongodb+srv://tehniyatkhatoon17:BlvS5HfCdW9ptE5h@bookstore.2ria5fh.mongodb.net/"
+// "mongodb://0.0.0.0:27017"
+// "mongodb+srv://khantehniyat83464928:TTtt1727@studentapisdata.hbyaf3g.mongodb.net/"
 // "mongodb+srv://khantehniyat83464928:TTtt1727@studentapisdata.hbyaf3g.mongodb.net/?retryWrites=true&w=majority"
 // 'mongodb+srv://khantehniyat83464928:TTtt1727@studentapisdata.hbyaf3g.mongodb.net/'; // Replace with your actual MongoDB URI
 

@@ -1,25 +1,43 @@
 import express from 'express'
 import mongoose from "mongoose";
 import studentRouter from './Routes/studentRouter.js';
-
 import bodyParser from 'body-parser';
 import addUserRouter from './Routes/userRouter.js';
 import addmissionForm1Router from './Routes/addmissionForm1Router.js';
 import enquiryFormRouter from './Routes/enquiryFormRouter.js';
 
 import dotenv from 'dotenv'
-import connectDB from './DB/ConnectDb.js';
+// import connectDB from './DB/ConnectDb.js';
 dotenv.config()
 
 const app = express()
 const port = process.env.PORT || '3000'
+mongoose.set('strictQuery', true);
 
 
 //data base connection start
-const mongoURI =process.env.DATABASE_URL
-const DBNAME=process.env.DBNAME
-connectDB(mongoURI,DBNAME);
+// const mongoURI =process.env.DATABASE_URL
+// const DBNAME=process.env.DBNAME
+// connectDB(mongoURI,DBNAME);
 
+
+
+// Get the MongoDB connection URI from the environment variables
+const mongoURI = process.env.MONGODB_URI;
+
+// Connect to the MongoDB database
+mongoose
+    .connect(mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        dbName: "Cources"
+    })
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error);
+    });
 
 
 // mongoose.connect("mongodb+srv://tehniyatkhatoon17:BlvS5HfCdW9ptE5h@bookstore.2ria5fh.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true});

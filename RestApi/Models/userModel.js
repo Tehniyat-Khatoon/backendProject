@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 // const saltRounds = 10;
 
 const userSchema=new mongoose.Schema({
-    Fname:{type:String,require:true},
+    fname:{type:String,require:true},
     lname:{type:String,require:true},
-    mobile:{type:mongoose.Decimal128,min:10,max:12,require:true},
+    mobile:{type:Number,min:10,max:12,require:true},
     emailId:{type:String,require:true}
     
 
