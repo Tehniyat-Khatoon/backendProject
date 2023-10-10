@@ -2,9 +2,9 @@ import { userServices, getuserServices, userDataServices } from "../Services/use
 
 
 const userController = async ( req,res ) => {
-   let {name, mobile, emailId, password}=req.body
+   let {fname, lname, emailId, mobile}=req.body
   
-   const data = await userDataServices (name, mobile, emailId, password)
+   const data = await userDataServices (fname, lname, emailId, mobile)
    // console.log(data);
    // console.log(res);
 
@@ -18,19 +18,19 @@ const userController = async ( req,res ) => {
 
 
 
-const getUserPassword = async (req, res) => {
-   let { name, mobile, emailId } = req.body
+// const getUserPassword = async (req, res) => {
+//    let { name, mobile, emailId } = req.body
 
-   const data = await getuserServices(name, mobile, emailId, password);
+//    const data = await getuserServices(name, mobile, emailId, password);
 
    //  const myPlaintextPassword =  data;
    //  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
-   console.log(data);
+   // console.log(data);
   
 
 
 
-}
+// }
 
 
 

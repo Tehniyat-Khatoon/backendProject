@@ -20,7 +20,6 @@ const AddmissionForm1Schema = new mongoose.Schema ( {
     installmentInput2:{type:mongoose.Decimal128,min:10,max:11,require:true},
     installment1Date1:{type:Date,require:true},
     installment1Date2:{type:Date,require:true},
-
     address:{type:String,require:true},
     
 

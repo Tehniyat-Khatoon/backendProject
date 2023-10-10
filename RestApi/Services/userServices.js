@@ -11,20 +11,20 @@ const userServices=async()=>{
     return servicedata
 }
 
-const userDataServices=async(name,mobile,emailId,password)=>{
-  const userdata= new  userModel({name,mobile,emailId,password})
+const userDataServices=async(fname, lname, emailId, mobile)=>{
+  const userdata= new  userModel({fname, lname, emailId, mobile})
  await userdata.save()
  return userdata
  
 }
 
-const getuserServices=async(name,mobile,emailId)=>{
-    const userdata=await userModel.find({
-      // name,
-      mobile,emailId})
+// const getuserServices=async(fname,mobile,emailId)=>{
+//     const userdata=await userModel.find({
+//       // name,
+//       mobile,emailId})
   
   //  console.log(userdata);
-    return userdata[0].password;
+    // return userdata[0].password;
     
   // const hashpassword=  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
   // const doc=new  userModel({
@@ -36,6 +36,6 @@ const getuserServices=async(name,mobile,emailId)=>{
   //    console.log(hash);})
   //    doc.save()
   //   return doc
-}
+// }
 
-export {userServices,getuserServices,userDataServices}
+export {userServices,userDataServices}
