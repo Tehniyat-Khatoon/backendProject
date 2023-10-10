@@ -1,4 +1,4 @@
-import { userServices, getuserServices, userDataServices } from "../Services/userServices.js";
+import { userServices, userDataServices } from "../Services/userServices.js";
 
 
 const userController = async ( req,res ) => {
@@ -53,4 +53,4 @@ const userData = async (req, res) => {
 
 
 
-export { userController, getUserPassword, userData }
+export { userController, userData }
