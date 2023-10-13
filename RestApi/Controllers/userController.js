@@ -1,13 +1,13 @@
 import { userServices, userDataServices } from "../Services/userServices.js";
 
 
-const userController = async ( req,res ) => {
-   let {fname, lname, emailId, mobile}=req.body
-  
-   const data = await userDataServices (fname, lname, emailId, mobile)
+const userController = async (req, res) => {
+   let { fname, lname, emailId, mobile } = req.body
+
+   const data = await userDataServices(fname, lname, emailId, mobile)
    // console.log(data);
    // console.log(res);
-
+   console.log(data);
    res.json({ data })
 }
 
@@ -23,10 +23,10 @@ const userController = async ( req,res ) => {
 
 //    const data = await getuserServices(name, mobile, emailId, password);
 
-   //  const myPlaintextPassword =  data;
-   //  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
-   // console.log(data);
-  
+//  const myPlaintextPassword =  data;
+//  bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+// console.log(data);
+
 
 
 
@@ -42,8 +42,8 @@ const userData = async (req, res) => {
       const data = await userServices()
       console.log(data);
       // console.log(res);
-      res.json({data})
-     return data
+      res.json({ data })
+      return data
    } catch (error) {
       console.log(error);
    }
