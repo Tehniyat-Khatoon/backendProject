@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const userSchema=new mongoose.Schema({
     fname:{type:String,require:true},
     lname:{type:String,require:true},
-    mobile:{type:Number,min:10,max:12,require:true},
+    mobile:{type:Number,require:true},
     emailId:{type:String,require:true}
     
 

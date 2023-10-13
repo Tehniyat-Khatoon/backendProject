@@ -10,7 +10,7 @@ import   { createDataService, getStudentServices } from "../Services/studentServ
 
 
  const data= await createDataService(name,email,message)
-//  console.log(data);
+ console.log(data);
 //  console.log(res);
  res.json({data})
 

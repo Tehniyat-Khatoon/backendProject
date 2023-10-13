@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 const AddmissionForm1Schema = new mongoose.Schema ( {
 
     name:{type:String,required:true,trim:true},
-    phone:{type:Number,min:10,max:12,require:true},
+    phone:{type:Number,require:true},
     email:{type:String,require:true},
     course1:{type:String,require:true},
     course2:{type:String,require:true},
