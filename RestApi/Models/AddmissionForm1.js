@@ -74,7 +74,7 @@ function validateMobileNumber(mobile) {
 
 // Add a custom validation function to check the image size
 AddmissionForm1Schema.path('image.data').validate(function (value) {
-    const maxSizeBytes = 10 * 1024 * 1024; // 10MB (adjust as needed)
+    const maxSizeBytes = 2 * 1024 * 1024; // 10MB (adjust as needed)
   
     if (value && value.length > maxSizeBytes) {
       return false; // Validation fails
