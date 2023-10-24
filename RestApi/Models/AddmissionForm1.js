@@ -48,12 +48,12 @@ const AddmissionForm1Schema = new mongoose.Schema({
     subject6: { type: String, require: true, trim: true },
     image:{
         type: String,
-        required: true,
+        required: false,
       },
-      image: {
-      data: Buffer,  // Store the image binary data as a Buffer
-        contentType: String,
-      },
+    //   image: {
+    //   data: Buffer,  // Store the image binary data as a Buffer
+    //     contentType: String,
+    //   },
     
       
 
@@ -73,15 +73,15 @@ function validateMobileNumber(mobile) {
 }
 
 // Add a custom validation function to check the image size
-AddmissionForm1Schema.path('image.data').validate(function (value) {
-    const maxSizeBytes = 2 * 1024 * 1024; // 2MB (adjust as needed)
+// AddmissionForm1Schema.path('image.data').validate(function (value) {
+//     const maxSizeBytes = 2 * 1024 * 1024; // 2MB (adjust as needed)
   
-    if (value && value.length > maxSizeBytes) {
-      return false; // Validation fails
-    }
+//     if (value && value.length > maxSizeBytes) {
+//       return false; // Validation fails
+//     }
   
-    return true; // Validation passes
-  }, 'Image size exceeds the allowed limit.');
+//     return true; // Validation passes
+//   }, 'Image size exceeds the allowed limit.');
   
 const userAddmissionForm1Model = mongoose.model('AdmissionForm', AddmissionForm1Schema)
 

@@ -14,6 +14,7 @@ import  {admissionServices, getAdmissionFormService } from "../Services/admision
      const getAdmissionForm = async(req,res)=>{
         const data = await getAdmissionFormService()
         res.json({data})
+        console.log(data);
      }
 
 

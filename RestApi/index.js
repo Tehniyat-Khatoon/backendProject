@@ -46,6 +46,7 @@ mongoose
 //data base connection end
 
 app.use(bodyParser.urlencoded({ extended: true }))
+
 app.use(express.json());
 app.use(express.static('public'))
 
