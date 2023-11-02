@@ -7,7 +7,7 @@ import addmissionForm1Router from './Routes/addmissionForm1Router.js';
 import enquiryFormRouter from './Routes/enquiryFormRouter.js';
 // import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv'
-import LoginRouter from './Routes/LoginRouter.js';
+import LoginRouter from './Routes/loginRouter.js';
 // import connectDB from './DB/ConnectDb.js';
 dotenv.config()
 

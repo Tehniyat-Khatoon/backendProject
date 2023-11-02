@@ -1,10 +1,10 @@
-import LoginModel from "../Models/LoginModel.js"
+import LoginModel from "../Models/loginModel.js"
 
 
 
-const createLoginServices=async(username,password)=>{
+const createLoginServices=async(UserName,Password)=>{
 
-    const LoginData=new LoginModel({username,password})
+    const LoginData=new LoginModel({UserName,Password})
     await  LoginData.save() 
     return LoginData
 }

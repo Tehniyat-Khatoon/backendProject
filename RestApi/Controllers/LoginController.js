@@ -1,4 +1,4 @@
-import  {createLoginServices, getLoginServices } from "../Services/LoginServices.js";
+import  {createLoginServices, getLoginServices } from "../Services/loginServices.js";
 
 const createLoginData= async(req,res)=>{
    
@@ -6,23 +6,19 @@ const createLoginData= async(req,res)=>{
    //  console.log(`the name is ${email}`)
    //  console.log(`the name is ${message}`)
    //  console.log('hii');
-   let {username,password}=req.body 
+   let {UserName,Password}=req.body 
    console.log(req.body);
-  if (username=='stepAcademy' && password=='step@123') {
-      
-   res.send('login successfully')
- 
-  
-  }else{
-      res.send('login failed')
-      
-  }
+   if (UserName == 'stepAcademy' && Password == 'step@123') {
+    res.status(200).json({ message: 'Login successful' });
+ } else {
+    res.status(401).json({ message: 'Login failed' });
+ }
 
   
-  const data= await createLoginServices(username,password)
+  const data= await createLoginServices(UserName,Password)
   console.log(data);
   //  console.log(res);
-  res.json({data})
+  // res.json({data})
   
 } 
 

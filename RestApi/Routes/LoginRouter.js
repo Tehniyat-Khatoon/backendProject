@@ -1,5 +1,5 @@
 import express from 'express'
-import  { createLoginData,getLoginData } from '../Controllers/LoginController.js'
+import  { createLoginData,getLoginData } from '../Controllers/loginController.js'
 const LoginRouter =express.Router()
 
 
