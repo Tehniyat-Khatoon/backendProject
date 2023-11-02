@@ -1,12 +1,50 @@
-import  Express  from "express";
-const addUserRouter=Express.Router()
+import Express from "express";
+import nodemailer from "nodemailer"
+const addUserRouter = Express.Router()
 import { userController, userData } from "../Controllers/userController.js";
 
 
 
-addUserRouter.post('/addUser',userController)
+// Define your email sending function
+export const sendEmail = async (to, subject, text) => {
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail', // e.g., 'Gmail'
+    port: 465,
+    secure: true,
+    secureConnection: false,
+    auth: {
+      user: 'tehniyatkhatoon17@gmail.com', // Your email address
+      pass: 'Node.jsEmailApp', // Your email password
+    },
+    tls: {
+      rejectUnAuthorized: true
+    }
+  });
+ 
+
+const mailOptions = {
+  from: 'khantehniyat83464928@gmail.com', // Your email address
+  to: to, // User's email address
+  subject: subject,
+  text: text,
+};
+
+await transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+    console.log('Error sending email: ' + error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+let info = await transporter.sendMail(mailOptions);
+console.log(`Message Sent: ${info.messageId}`);
+}
+  ;
+
+
+addUserRouter.post('/addUser', userController)
 // addUserRouter.post('/getUserPassword',getUserPassword)
-addUserRouter.get('/',userData)
+addUserRouter.get('/', userData)
 
 // addUserRouter.post('/replace',replacePassword)
 

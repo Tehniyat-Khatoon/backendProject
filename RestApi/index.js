@@ -5,8 +5,9 @@ import bodyParser from 'body-parser';
 import addUserRouter from './Routes/userRouter.js';
 import addmissionForm1Router from './Routes/addmissionForm1Router.js';
 import enquiryFormRouter from './Routes/enquiryFormRouter.js';
-
+// import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv'
+import LoginRouter from './Routes/LoginRouter.js';
 // import connectDB from './DB/ConnectDb.js';
 dotenv.config()
 
@@ -46,17 +47,22 @@ mongoose
 //data base connection end
 
 app.use(bodyParser.urlencoded({ extended: true }))
-
+// app.use(fileUpload())
 app.use(express.json());
 app.use(express.static('public'))
 
 //load routes
+// app.use('/',express.static('/upload/images'))
 app.use('/student', studentRouter)
 app.use('/user', addUserRouter)
 app.use('/admission', addmissionForm1Router)
 app.use('/enquiry', enquiryFormRouter)
+app.use('/Login',LoginRouter)
 
-
+// res.json({
+//     success: 1,
+//     profile_url: `http://localhost:3003/profile/${req.file.filename}`
+//  })
 
 
 app.listen(port, () => {
