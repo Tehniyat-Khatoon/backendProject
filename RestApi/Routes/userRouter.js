@@ -11,10 +11,10 @@ export const sendEmail = async (to, subject, text) => {
     service: 'Gmail', // e.g., 'Gmail'
     port: 465,
     secure: true,
-    secureConnection: false,
+    secureConnection: true,
     auth: {
       user: 'tehniyatkhatoon17@gmail.com', // Your email address
-      pass: 'Node.jsEmailApp', // Your email password
+      pass: 'fnny heyo ybei xdkx', // Your email password
     },
     tls: {
       rejectUnAuthorized: true
