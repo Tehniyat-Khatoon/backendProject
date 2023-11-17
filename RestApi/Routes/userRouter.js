@@ -13,8 +13,8 @@ export const sendEmail = async (to, subject, text) => {
     secure: true,
     secureConnection: true,
     auth: {
-      user: 'tehniyatkhatoon17@gmail.com', // Your email address
-      pass: 'fnny heyo ybei xdkx', // Your email password
+      user: 'agastyatechasyst@gmail.com', // Your email address
+      pass: 'pbqx prqv feyt djoa', // Your email password
     },
     tls: {
       rejectUnAuthorized: true
@@ -23,7 +23,7 @@ export const sendEmail = async (to, subject, text) => {
  
 
 const mailOptions = {
-  from: 'khantehniyat83464928@gmail.com', // Your email address
+  from: 'agastyatechasyst@gmail.com', // Your email address
   to: to, // User's email address
   subject: subject,
   text: text,

@@ -92,8 +92,8 @@ const userController = async (req, res) => {
       // Assuming you have successfully created the user
 
       const userEmail = req.body.emailId;
-      const subject = 'Registration Successful';
-      const message = 'Thank you for registering!';
+      const subject = `  Registration Successful`;
+      const message = ` Dear ${req.body.fname} ${req.body.lname} Your registration successfull ... Thank you for registering!`;
 
       // Send a success email to the user
       await sendEmail(userEmail, subject, message);

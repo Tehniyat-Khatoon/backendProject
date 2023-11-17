@@ -38,19 +38,7 @@ const AddmissionForm1Schema = new mongoose.Schema({
         },
     },
     course1: { type: String, require: true, trim: true },
-    course2: { type: String, require: true, trim: true },
-    course3: { type: String, require: true, trim: true },
-    course4: { type: String, require: true, trim: true },
-    subject1: { type: String, require: true, trim: true },
-    subject2: { type: String, require: true, trim: true },
-    subject3: { type: String, require: true, trim: true },
-    subject4: { type: String, require: true, trim: true },
-    subject5: { type: String, require: true, trim: true },
-    subject6: { type: String, require: true, trim: true },
-    image: {
-        type: String,
-        required: false,
-    },
+   
     //   image: {
     //   data: Buffer,  // Store the image binary data as a Buffer
     //     contentType: String,
@@ -58,11 +46,7 @@ const AddmissionForm1Schema = new mongoose.Schema({
 
 
 
-    installmentInput1: { type: Number, min: 1, max: 11, require: true, trim: true },
-    installmentInput2: { type: Number, min: 1, max: 11, require: true, trim: true },
-    installment1Date1: { type: Date, require: true, trim: true },
-    installment1Date2: { type: Date, require: true, trim: true },
-    address: { type: String, require: true, trim: true },
+   
 
 
 

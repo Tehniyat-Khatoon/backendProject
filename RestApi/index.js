@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from "mongoose";
 import studentRouter from './Routes/studentRouter.js';
 import bodyParser from 'body-parser';
+// var cors = require('cors')
 import addUserRouter from './Routes/userRouter.js';
 import addmissionForm1Router from './Routes/addmissionForm1Router.js';
 import enquiryFormRouter from './Routes/enquiryFormRouter.js';
@@ -50,7 +51,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(fileUpload())
 app.use(express.json());
 app.use(express.static('public'))
-
+// app.use(cors());
 //load routes
 // app.use('/',express.static('/upload/images'))
 app.use('/student', studentRouter)

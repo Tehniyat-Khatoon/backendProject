@@ -1,8 +1,8 @@
 import userAddmissionForm1Model from "../Models/AddmissionForm1.js"
 
-const admissionServices=async(name,phone,email,course1,course2,course3,course4,subject1,subject2,subject3,subject4,subject5,subject6,installmentInput1,installmentInput2,installment1Date1,installment1Date2,address,image)=>{
+const admissionServices=async(name, phone, email, course1 )=>{
 
-    const admissiondata=new userAddmissionForm1Model({name,phone,email,course1,course2,course3,course4,subject1,subject2,subject3,subject4,subject5,subject6,installmentInput1,installmentInput2,installment1Date1,installment1Date2,address,image})
+    const admissiondata=new userAddmissionForm1Model({name, phone, email, course1 })
     await  admissiondata.save() 
     return admissiondata
 }
