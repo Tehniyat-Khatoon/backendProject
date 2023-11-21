@@ -85,8 +85,8 @@ import { sendEmail } from "../Routes/userRouter.js";
 import { userServices, userDataServices } from "../Services/userServices.js";
 
 const userController = async (req, res) => {
-   let { fname, lname, emailId, mobile } = req.body;
-   const data = await userDataServices(fname, lname, emailId, mobile)
+   let { fname, lname,mobile, emailId } = req.body;
+   const data = await userDataServices(fname, lname, mobile, emailId)
    try {
       // Your user creation logic here
       // Assuming you have successfully created the user

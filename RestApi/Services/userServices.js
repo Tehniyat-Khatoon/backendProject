@@ -11,8 +11,8 @@ const userServices=async()=>{
     return servicedata
 }
 
-const userDataServices=async(fname, lname, emailId, mobile)=>{
-  const userdata= new  userModel({fname, lname, emailId, mobile})
+const userDataServices=async(fname, lname,mobile, emailId)=>{
+  const userdata= new  userModel({fname, lname,mobile, emailId})
  await userdata.save()
  return userdata
  
