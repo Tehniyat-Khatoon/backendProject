@@ -49,9 +49,10 @@ mongoose
 
 app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(fileUpload())
+app.use(cors());
 app.use(express.json());
 app.use(express.static('public'))
-app.use(cors());
+
 //load routes
 // app.use('/',express.static('/upload/images'))
 app.use('/student', studentRouter)
