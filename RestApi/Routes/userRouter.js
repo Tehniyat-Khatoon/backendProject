@@ -2,7 +2,11 @@ import Express from "express";
 import nodemailer from "nodemailer"
 const addUserRouter = Express.Router()
 import { userController, userData } from "../Controllers/userController.js";
+import cors from 'cors';
 
+const app = Express();
+app.use(cors()); 
+// cors added
 
 
 // Define your email sending function
