@@ -21,7 +21,7 @@ export const sendEmail = async (to, subject, text) => {
       pass: 'pbqx prqv feyt djoa', // Your email password
     },
     tls: {
-      rejectUnAuthorized: true
+      rejectUnAuthorized: false
     }
   });
  
