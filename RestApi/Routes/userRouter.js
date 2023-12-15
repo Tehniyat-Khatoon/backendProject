@@ -56,14 +56,14 @@ export const sendEmail = async (to, subject, text) => {
     const transporter = nodemailer.createTransport({
       service: 'Gmail', // e.g., 'Gmail'
       port: 465,
-      secure: false,
-      secureConnection: false,
+      secure: true,
+      secureConnection: true,
       auth: {
         user: 'agastyatechasyst@gmail.com', // Your email address
         pass: 'pbqx prqv feyt djoa', // Your email password
       },
       tls: {
-        rejectUnAuthorized: false,
+        rejectUnAuthorized: true,
       },
     });
 
@@ -73,9 +73,10 @@ export const sendEmail = async (to, subject, text) => {
       subject: subject,
       text: text,
     };
+    console.log(mailOptions);
 
     const info = await transporter.sendMail(mailOptions);
-    console.log(`Email sent: ${info.response}`);
+    console.log(`Email sent: ${info.messageId}`);
   } catch (error) {
     console.error('Error sending email:', error);
   }

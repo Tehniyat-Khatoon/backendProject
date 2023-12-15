@@ -16,6 +16,9 @@ const userController = async (req, res) => {
         Mobile Number:${req.body.mobile}
         Email Id:     ${req.body.emailId}
       `;
+      console.log(userEmail);
+      console.log(fname);
+      // console.log(message);
 
       // Send a success email to the user
       await sendEmail(userEmail, subject, message);
