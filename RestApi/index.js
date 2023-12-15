@@ -8,7 +8,8 @@ import addmissionForm1Router from './Routes/addmissionForm1Router.js';
 import enquiryFormRouter from './Routes/enquiryFormRouter.js';
 // import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv'
-import LoginRouter from './Routes/loginRouter.js';
+import loginRouter from './Routes/loginRouter.js';
+
 // import connectDB from './DB/ConnectDb.js';
 
 
@@ -65,7 +66,7 @@ app.use('/student', studentRouter)
 app.use('/user', addUserRouter)
 app.use('/admission', addmissionForm1Router)
 app.use('/enquiry', enquiryFormRouter)
-app.use('/Login',LoginRouter)
+app.use('/Login',loginRouter)
 
 // res.json({
 //     success: 1,
