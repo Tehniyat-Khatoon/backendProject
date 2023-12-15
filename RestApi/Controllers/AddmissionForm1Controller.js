@@ -13,7 +13,7 @@ const createAdmissionForm = async (req, res) => {
 
       const userEmail = req.body.email;
       const subject = `  Admission Successful`;
-      const message = ` Dear ${req.body.name}  Your Admission is successfull ... Thank you for Admission!
+      const message = ` Dear ${req.body.name}  Your Admission submission is successfull ... Thank you for Admission!
       your personal details are
       Mobile Number :${req.body.phone} 
       Email Id :${req.body.email}

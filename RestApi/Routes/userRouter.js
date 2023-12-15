@@ -10,28 +10,28 @@ app.use(cors());
 
 
 // Define your email sending function
-export const sendEmail = async (to, subject, text) => {
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail', // e.g., 'Gmail'
-    port: 465,
-    secure: false,
-    secureConnection: false,
-    auth: {
-      user: 'agastyatechasyst@gmail.com', // Your email address
-      pass: 'pbqx prqv feyt djoa', // Your email password
-    },
-    tls: {
-      rejectUnAuthorized: false
-    }
-  });
+// export const sendEmail = async (to, subject, text) => {
+//   const transporter = nodemailer.createTransport({
+//     service: 'Gmail', // e.g., 'Gmail'
+//     port: 465,
+//     secure: false,
+//     secureConnection: false,
+//     auth: {
+//       user: 'agastyatechasyst@gmail.com', // Your email address
+//       pass: 'pbqx prqv feyt djoa', // Your email password
+//     },
+//     tls: {
+//       rejectUnAuthorized: false
+//     }
+//   });
  
 
-const mailOptions = {
-  from: 'agastyatechasyst@gmail.com', // Your email address
-  to: to, // User's email address
-  subject: subject,
-  text: text,
-};
+// const mailOptions = {
+//   from: 'agastyatechasyst@gmail.com', // Your email address
+//   to: to, // User's email address
+//   subject: subject,
+//   text: text,
+// };
 
 // await transporter.sendMail(mailOptions, (error, info) => {
 //   if (error) {
@@ -43,14 +43,43 @@ const mailOptions = {
 // let info = await transporter.sendMail(mailOptions);
 // console.log(`Message Sent: ${info.messageId}`);
 
-try {
-  let info = await transporter.sendMail(mailOptions);
-  console.log(`Email sent: ${info.response}`);
-} catch (error) {
-  console.error('Error sending email:', error);
-}
-}
-  ;
+// try {
+//   let info = await transporter.sendMail(mailOptions);
+//   console.log(`Email sent: ${info.response}`);
+// } catch (error) {
+//   console.error('Error sending email:', error);
+// }
+// };
+
+export const sendEmail = async (to, subject, text) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'Gmail', // e.g., 'Gmail'
+      port: 465,
+      secure: false,
+      secureConnection: false,
+      auth: {
+        user: 'agastyatechasyst@gmail.com', // Your email address
+        pass: 'pbqx prqv feyt djoa', // Your email password
+      },
+      tls: {
+        rejectUnAuthorized: false,
+      },
+    });
+
+    const mailOptions = {
+      from: 'agastyatechasyst@gmail.com', // Your email address
+      to: to, // User's email address
+      subject: subject,
+      text: text,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    console.log(`Email sent: ${info.response}`);
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
+};
 
 
 addUserRouter.post('/addUser', userController)
