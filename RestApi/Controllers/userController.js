@@ -11,7 +11,11 @@ const userController = async (req, res) => {
 
       const userEmail = req.body.emailId;
       const subject = `  Registration Successful`;
-      const message = ` Dear ${req.body.fname} ${req.body.lname} Your registration successfull ... Thank you for registering!`;
+      const message = ` Dear ${req.body.fname} ${req.body.lname} Your registration successfull ... Thank you for registering!
+      Your personal details are 
+        Mobile Number:${req.body.mobile}
+        Email Id:     ${req.body.emailId}
+      `;
 
       // Send a success email to the user
       await sendEmail(userEmail, subject, message);
