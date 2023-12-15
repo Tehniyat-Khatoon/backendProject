@@ -14,8 +14,8 @@ export const sendEmail = async (to, subject, text) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail', // e.g., 'Gmail'
     port: 465,
-    secure: true,
-    secureConnection: true,
+    secure: false,
+    secureConnection: false,
     auth: {
       user: 'agastyatechasyst@gmail.com', // Your email address
       pass: 'pbqx prqv feyt djoa', // Your email password
