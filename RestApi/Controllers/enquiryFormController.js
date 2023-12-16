@@ -2,8 +2,8 @@ import { sendEmail } from "../Routes/enquiryFormRouter.js";
 import { createEnquiryServices, getEnquiryServices } from "../Services/enquiryService.js";
 
 const createEnquiryForm = async (req, res) => {
-   let { name, contactNumber, emailId, cource, residentialAddress, refrenceIfAny } = req.body
-   const data = await createEnquiryServices(name, contactNumber, emailId, cource, residentialAddress, refrenceIfAny)
+   let { name, contactNumber, emailId, cource, residentialAddress } = req.body
+   const data = await createEnquiryServices(name, contactNumber, emailId, cource, residentialAddress)
    //  console.log(data);
    //  console.log(res);
 

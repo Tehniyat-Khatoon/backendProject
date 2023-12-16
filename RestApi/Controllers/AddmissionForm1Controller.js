@@ -41,7 +41,7 @@ const createAdmissionForm = async (req, res) => {
 const getAdmissionForm = async (req, res) => {
    try {
 
-      const data = await userServices()
+      const data = await getAdmissionFormService()
       console.log(data);
       res.json({ data });
    } catch (error) {
