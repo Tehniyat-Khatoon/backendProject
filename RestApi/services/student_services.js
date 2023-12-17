@@ -1,15 +1,17 @@
-import studentModel from "../Models/studentModel.js"
+import student_model from "../Models/student_model.js"
+
+
 
 const createDataService=async(name,email,message)=>{
 
-    const studentdata=new studentModel({name,email,message})
+    const studentdata=new student_model({name,email,message})
     await  studentdata.save() 
     return studentdata
 }
 
 
 const getStudentServices= async()=>{
-    const studentData= await studentModel.find()
+    const studentData= await student_model.find()
     // console.log(studentData);
     return studentData
 }

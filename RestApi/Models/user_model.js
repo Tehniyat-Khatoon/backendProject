@@ -70,7 +70,7 @@ function validateMobileNumber(mobile) {
   return mobileNumberPattern.test(mobile);
 }
 
-const userModel = mongoose.model('user', userSchema)
+const user_model = mongoose.model('user', userSchema)
 // const myPlaintextPassword =  'password';
 
 
@@ -86,4 +86,4 @@ const userModel = mongoose.model('user', userSchema)
 
 
 
-export default userModel
+export default user_model

@@ -1,4 +1,5 @@
-import enquiryFormModel from "../Models/enquiryFormModel.js"
+import enquiryFormModel from "../Models/enquiry_form_model.js"
+
 
 const createEnquiryServices=async(name,contactNumber,emailId,cource,residentialAddress,refrenceIfAny)=>{
 

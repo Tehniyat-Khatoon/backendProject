@@ -1,13 +1,15 @@
 import express from 'express'
 import nodemailer from "nodemailer"
+const addmission_form1_router=express.Router()
+import cors from 'cors';
+import { createAdmissionForm, getAdmissionForm } from '../Controllers/addmission_form1_controller.js';
+
+
 
 // import multer from 'multer'
 // import path from 'path'
-import cors from 'cors';
-const app=express()
-app.use(cors());
-import  { createAdmissionForm, getAdmissionForm } from '../Controllers/AddmissionForm1Controller.js'
-const addmissionForm1Router=express.Router()
+// const app=express()
+addmission_form1_router.use(cors());
 
 // const storage =multer.diskStorage({
 //     destination:'./upload/images',
@@ -58,9 +60,11 @@ console.log(`Message Sent: ${info.messageId}`);
 }
   ;
 
-addmissionForm1Router.get('/',getAdmissionForm)
-//admin panel
-addmissionForm1Router.post('/',createAdmissionForm)
+// addmission_form1_router.get('/',getAdmissionForm)
+// Define your route handlers
+addmission_form1_router.get('/', getAdmissionForm);
+addmission_form1_router.post('/', createAdmissionForm);
+
 // addmissionForm1Router.post('/',upload.single('images'),uploadImage)
 
 // addmissionForm1Router.post("/update-profile",(req, res) => {
@@ -81,4 +85,4 @@ addmissionForm1Router.post('/',createAdmissionForm)
 
 
 
-export default addmissionForm1Router
+export default addmission_form1_router

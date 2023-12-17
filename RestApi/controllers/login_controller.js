@@ -1,4 +1,4 @@
-import  {createLoginServices, getLoginServices } from "../Services/loginServices.js";
+import  {createLoginServices, getLoginServices } from "../services/login_services.js";
 
 const createLoginData= async(req,res)=>{
    

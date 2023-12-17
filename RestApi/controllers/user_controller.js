@@ -1,6 +1,6 @@
 
-import { sendEmail } from "../Routes/userRouter.js";
-import { userServices, userDataServices } from "../Services/userServices.js";
+import { sendEmail } from "../routes/user_router.js";
+import { userServices, userDataServices } from "../services/user_services.js";
 
 const userController = async (req, res) => {
    let { fname, lname,mobile, emailId } = req.body;

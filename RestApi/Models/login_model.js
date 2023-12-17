@@ -27,7 +27,7 @@ Password:{
 })
 
 
-const LoginModel = mongoose.model("Login",LoginModelSchema)
+const login_model = mongoose.model("Login",LoginModelSchema)
 
 
-export default LoginModel
+export default login_model

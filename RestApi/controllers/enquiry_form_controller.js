@@ -1,5 +1,6 @@
-import { sendEmail } from "../Routes/enquiryFormRouter.js";
-import { createEnquiryServices, getEnquiryServices } from "../Services/enquiryService.js";
+
+import { sendEmail } from "../routes/enquiry_form_router.js";
+import { createEnquiryServices, getEnquiryServices } from "../services/enquiry_service.js";
 
 const createEnquiryForm = async (req, res) => {
    let { name, contactNumber, emailId, cource, residentialAddress } = req.body

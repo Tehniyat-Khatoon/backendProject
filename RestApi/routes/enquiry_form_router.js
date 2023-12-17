@@ -1,10 +1,10 @@
 import express from 'express'
 import nodemailer from "nodemailer"
+const enquiry_form_router=express.Router()
+import { createEnquiryForm, getEnquiryForm } from '../Controllers/enquiry_form_controller.js';
 
 
-import  { createEnquiryForm, getEnquiryForm } from '../Controllers/enquiryFormController.js'
 
-const enquiryFormRouter=express.Router()
 
 
 
@@ -52,8 +52,8 @@ export const sendEmail = async (to, subject, text) => {
   };
   
 
-enquiryFormRouter.get('/',getEnquiryForm)
-enquiryFormRouter.post('/',createEnquiryForm)
+  enquiry_form_router.get('/',getEnquiryForm)
+  enquiry_form_router.post('/',createEnquiryForm)
 // enquiryFormRouter.get('/:id',enquiryFormController.getSingleDocById)
 // enquiryFormRouter.put('/:id',enquiryFormController.updateDocById)
 // enquiryFormRouter.delete('/:id',enquiryFormController.deleteDocById)
@@ -61,4 +61,4 @@ enquiryFormRouter.post('/',createEnquiryForm)
 
 
 
-export default enquiryFormRouter
+export default enquiry_form_router

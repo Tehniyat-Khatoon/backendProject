@@ -1,18 +1,19 @@
 
 // import { model } from "mongoose";
-import userModel from "../Models/userModel.js";
+import user_model from "../Models/user_model.js";
+
 
 
 
 const userServices=async()=>{
 
-    const servicedata=await userModel.find()
+    const servicedata=await user_model.find()
   //  console.log(servicedata);
     return servicedata
 }
 
 const userDataServices=async(fname, lname,mobile, emailId)=>{
-  const userdata= new  userModel({fname, lname,mobile, emailId})
+  const userdata= new  user_model({fname, lname,mobile, emailId})
  await userdata.save()
  return userdata
  

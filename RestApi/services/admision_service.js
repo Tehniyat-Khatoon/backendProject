@@ -1,4 +1,4 @@
-import userAddmissionForm1Model from "../Models/AddmissionForm1.js"
+import userAddmissionForm1Model from "../Models/addmission_form1.js"
 
 const admissionServices=async(name, phone, email, course1 )=>{
 

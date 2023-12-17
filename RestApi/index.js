@@ -1,14 +1,19 @@
 import express from 'express'
 import mongoose from "mongoose";
-import studentRouter from './Routes/studentRouter.js';
+// import studentRouter from './Routes/student_router.js';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import addUserRouter from './Routes/userRouter.js';
-import addmissionForm1Router from './Routes/addmissionForm1Router.js';
-import enquiryFormRouter from './Routes/enquiryFormRouter.js';
+// import addUserRouter from './Routes/user_router.js';
+// import addmissionForm1Router from './Routes/addmission_form1_router.js';
+// import enquiryFormRouter from './Routes/enquiry_form_router.js';
 // import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv'
-import loginRouter from './Routes/loginRouter.js';
+import login_router from './routes/login_router.js';
+import addmission_form1_router from './routes/addmission_form1_router.js';
+import enquiry_form_router from './routes/enquiry_form_router.js';
+import user_router from './routes/user_router.js';
+import student_router from './routes/student_router.js';
+
 
 // import connectDB from './DB/ConnectDb.js';
 
@@ -62,11 +67,11 @@ app.use(express.static('public'))
 
 //load routes
 // app.use('/',express.static('/upload/images'))
-app.use('/student', studentRouter)
-app.use('/user', addUserRouter)
-app.use('/admission', addmissionForm1Router)
-app.use('/enquiry', enquiryFormRouter)
-app.use('/Login',loginRouter)
+app.use('/student', student_router)
+app.use('/user', user_router)
+app.use('/admission', addmission_form1_router)
+app.use('/enquiry', enquiry_form_router)
+app.use('/login',login_router)
 
 // res.json({
 //     success: 1,

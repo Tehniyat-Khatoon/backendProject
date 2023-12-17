@@ -1,4 +1,4 @@
-import   { createDataService, getStudentServices } from "../Services/studentServices.js";
+import   { createDataService, getStudentServices } from "../services/student_services.js";
 
 
  const createData= async(req,res)=>{

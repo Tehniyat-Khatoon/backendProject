@@ -1,8 +1,18 @@
 
-import { sendEmail } from "../Routes/addmissionForm1Router.js";
-import { admissionServices, getAdmissionFormService } from "../Services/admisionService.js";
+import { sendEmail } from "../routes/addmission_form1_router.js";
+import { admissionServices, getAdmissionFormService } from "../services/admision_service.js";
 
+const getAdmissionForm = async (req, res) => {
+   try {
 
+      const data = await getAdmissionFormService()
+      console.log(data);
+      res.json({ data });
+   } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching user data' });
+   }
+}
 
 const createAdmissionForm = async (req, res) => {
    let { name, phone, email, course1 } = req.body
@@ -38,17 +48,7 @@ const createAdmissionForm = async (req, res) => {
 //   console.log(res);
 
 
-const getAdmissionForm = async (req, res) => {
-   try {
 
-      const data = await getAdmissionFormService()
-      console.log(data);
-      res.json({ data });
-   } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'An error occurred while fetching user data' });
-   }
-}
 
 // const uploadImage = async (req, res) => {
 //    console.log(req.file);
