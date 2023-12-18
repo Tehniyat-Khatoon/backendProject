@@ -1,8 +1,10 @@
 import Express from "express";
 import nodemailer from "nodemailer"
 const user_router = Express.Router()
-import { userController, userData } from "../Controllers/user_controller.js";
+// import { userController, userData } from "../Controllers/user_controller.js";
+import { userController, userData } from "../controllers/user_controller.js";
 import cors from 'cors';
+
 
 const app = Express();
 app.use(cors()); 
@@ -83,7 +85,7 @@ export const sendEmail = async (to, subject, text) => {
 };
 
 
-user_router.post('/addUser', userController)
+user_router.post('/addUser',userController )
 // addUserRouter.post('/getUserPassword',getUserPassword)
 user_router.get('/', userData)
 
