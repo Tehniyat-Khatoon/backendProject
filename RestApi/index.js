@@ -8,11 +8,12 @@ import cors from 'cors';
 // import enquiryFormRouter from './Routes/enquiry_form_router.js';
 // import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv'
-import login_router from './routes/login_router.js';
+// import login_router from './routes/login_router.js';
 import addmission_form1_router from './routes/addmission_form1_router.js';
 import enquiry_form_router from './routes/enquiry_form_router.js';
 import user_router from './routes/user_router.js';
 import student_router from './routes/student_router.js';
+import login_router from './routes/login_router.js';
 
 
 // import connectDB from './DB/ConnectDb.js';
@@ -71,7 +72,7 @@ app.use('/student', student_router)
 app.use('/user', user_router)
 app.use('/admission', addmission_form1_router)
 app.use('/enquiry', enquiry_form_router)
-app.use('/login',login_router)
+app.use('/login',login_router )
 
 // res.json({
 //     success: 1,

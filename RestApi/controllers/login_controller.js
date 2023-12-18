@@ -18,7 +18,7 @@ const createLoginData= async(req,res)=>{
   const data= await createLoginServices(UserName,Password)
   console.log(data);
   //  console.log(res);
-  // res.json({data})
+  res.json({data})
   
 } 
 
@@ -26,4 +26,6 @@ const getLoginData= async(req,res)=>{
  const data = await getLoginServices()
  res.json({data})
 }
-export  {createLoginData,getLoginData}
+
+
+export {createLoginData,getLoginData}
