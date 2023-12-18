@@ -1,5 +1,5 @@
 import express from 'express'
-import  { createData, getData } from '../controllers/student_controller.js'
+import  { createData, getData } from '../Controllers/student_controller.js'
 
 
 const student_router =express.Router()

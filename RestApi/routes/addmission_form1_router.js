@@ -8,8 +8,9 @@ import { createAdmissionForm, getAdmissionForm } from '../Controllers/addmission
 
 // import multer from 'multer'
 // import path from 'path'
-// const app=express()
-addmission_form1_router.use(cors());
+const app=express()
+app.use(cors())
+// addmission_form1_router.use(cors());
 
 // const storage =multer.diskStorage({
 //     destination:'./upload/images',
@@ -62,7 +63,7 @@ console.log(`Message Sent: ${info.messageId}`);
 
 // addmission_form1_router.get('/',getAdmissionForm)
 // Define your route handlers
-addmission_form1_router.get('/', getAdmissionForm);
+addmission_form1_router.get('/',getAdmissionForm );
 addmission_form1_router.post('/', createAdmissionForm);
 
 // addmissionForm1Router.post('/',upload.single('images'),uploadImage)
